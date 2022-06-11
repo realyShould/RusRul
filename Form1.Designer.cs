@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.numericBullets = new System.Windows.Forms.NumericUpDown();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuNewGame = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnFire = new System.Windows.Forms.Button();
             this.btnSpin = new System.Windows.Forms.Button();
             this.labelBullets = new System.Windows.Forms.Label();
@@ -44,13 +40,12 @@
             this.labelScore = new System.Windows.Forms.Label();
             this.labelHscore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericBullets)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // numericBullets
             // 
-            this.numericBullets.Location = new System.Drawing.Point(311, 256);
+            this.numericBullets.Location = new System.Drawing.Point(311, 228);
             this.numericBullets.Maximum = new decimal(new int[] {
             6,
             0,
@@ -71,46 +66,9 @@
             0});
             this.numericBullets.ValueChanged += new System.EventHandler(this.numericBullets_ValueChanged);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gameToolStripMenuItem,
-            this.infoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(412, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // gameToolStripMenuItem
-            // 
-            this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuNewGame,
-            this.MenuExit});
-            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.gameToolStripMenuItem.Text = "Game";
-            // 
-            // MenuNewGame
-            // 
-            this.MenuNewGame.Name = "MenuNewGame";
-            this.MenuNewGame.Size = new System.Drawing.Size(132, 22);
-            this.MenuNewGame.Text = "New Game";
-            // 
-            // MenuExit
-            // 
-            this.MenuExit.Name = "MenuExit";
-            this.MenuExit.Size = new System.Drawing.Size(132, 22);
-            this.MenuExit.Text = "Exit";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
-            // 
             // btnFire
             // 
+            this.btnFire.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFire.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFire.Location = new System.Drawing.Point(304, 404);
             this.btnFire.Name = "btnFire";
@@ -122,6 +80,7 @@
             // 
             // btnSpin
             // 
+            this.btnFire.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSpin.Location = new System.Drawing.Point(325, 375);
             this.btnSpin.Name = "btnSpin";
             this.btnSpin.Size = new System.Drawing.Size(75, 23);
@@ -133,7 +92,7 @@
             // labelBullets
             // 
             this.labelBullets.AutoSize = true;
-            this.labelBullets.Location = new System.Drawing.Point(353, 258);
+            this.labelBullets.Location = new System.Drawing.Point(353, 237);
             this.labelBullets.Name = "labelBullets";
             this.labelBullets.Size = new System.Drawing.Size(42, 13);
             this.labelBullets.TabIndex = 4;
@@ -141,7 +100,8 @@
             // 
             // btnReload
             // 
-            this.btnReload.Location = new System.Drawing.Point(325, 284);
+            this.btnFire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Location = new System.Drawing.Point(325, 256);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(75, 23);
             this.btnReload.TabIndex = 5;
@@ -152,7 +112,7 @@
             // labelStatusStatic
             // 
             this.labelStatusStatic.AutoSize = true;
-            this.labelStatusStatic.Location = new System.Drawing.Point(13, 28);
+            this.labelStatusStatic.Location = new System.Drawing.Point(13, 9);
             this.labelStatusStatic.Name = "labelStatusStatic";
             this.labelStatusStatic.Size = new System.Drawing.Size(42, 13);
             this.labelStatusStatic.TabIndex = 6;
@@ -161,7 +121,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.labelStatus);
-            this.panel1.Location = new System.Drawing.Point(16, 44);
+            this.panel1.Location = new System.Drawing.Point(16, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 200);
             this.panel1.TabIndex = 7;
@@ -187,7 +147,7 @@
             // labelHscore
             // 
             this.labelHscore.AutoSize = true;
-            this.labelHscore.Location = new System.Drawing.Point(19, 258);
+            this.labelHscore.Location = new System.Drawing.Point(19, 228);
             this.labelHscore.Name = "labelHscore";
             this.labelHscore.Size = new System.Drawing.Size(79, 13);
             this.labelHscore.TabIndex = 9;
@@ -195,10 +155,11 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(412, 450);
             this.Controls.Add(this.labelHscore);
             this.Controls.Add(this.labelScore);
@@ -209,14 +170,11 @@
             this.Controls.Add(this.btnSpin);
             this.Controls.Add(this.btnFire);
             this.Controls.Add(this.numericBullets);
-            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MainMenuStrip = this.menuStrip1;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "Let\'s play?";
             ((System.ComponentModel.ISupportInitialize)(this.numericBullets)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -227,11 +185,6 @@
         #endregion
 
         private System.Windows.Forms.NumericUpDown numericBullets;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem MenuNewGame;
-        private System.Windows.Forms.ToolStripMenuItem MenuExit;
-        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.Button btnFire;
         private System.Windows.Forms.Button btnSpin;
         private System.Windows.Forms.Label labelBullets;
